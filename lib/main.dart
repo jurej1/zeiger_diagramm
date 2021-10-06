@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
         )
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.blue,
@@ -70,6 +71,11 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     );
 
     return Scaffold(
+      endDrawerEnableOpenDragGesture: true,
+      appBar: AppBar(
+        title: const Text('Hello'),
+      ),
+      endDrawer: const Drawer(),
       body: FittedBox(
         child: Column(
           children: [
