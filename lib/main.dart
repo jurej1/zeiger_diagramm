@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     _animationController = AnimationController(
       vsync: this,
       lowerBound: 0,
-      duration: const Duration(seconds: 4),
+      duration: const Duration(seconds: 8),
       upperBound: pi * 2,
     );
 
@@ -77,18 +77,22 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                     ComplexPaintingObject(
                       Complex.valueAngleDegree(188.275, 75.872),
                       lineColor: Colors.blue.shade400,
+                      name: 'U1',
                     ),
                     ComplexPaintingObject(
                       Complex.valueAngleDegree(294.066, -33.527),
                       lineColor: Colors.blue.shade500,
+                      name: 'U2',
                     ),
                     ComplexPaintingObject(
                       Complex.valueAngleDegree(223.293, -133.527),
                       lineColor: Colors.blue.shade600,
+                      name: 'U3',
                     ),
                     ComplexPaintingObject(
                       Complex.valueAngleDegree(66.0357, -45.898),
                       lineColor: Colors.orange,
+                      name: 'U0',
                     ),
                   ],
                 ),

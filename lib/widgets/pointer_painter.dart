@@ -62,16 +62,23 @@ class PointerPainter extends CustomPainter {
 
     dev.log(spannung.complex.angle.toString());
 
+    final endPoint = Offset(
+      center.dx + (x),
+      center.dy + (y),
+    );
+
     canvas.drawLine(
       center,
-      Offset(
-        center.dx + (x),
-        center.dy + (y),
-      ),
+      endPoint,
       Paint()
         ..color = spannung.lineColor
         ..strokeWidth = 5,
     );
+
+    TextSpan span = TextSpan(text: spannung.name);
+    TextPainter tp = TextPainter(text: span, textAlign: TextAlign.center, textDirection: TextDirection.ltr);
+    tp.layout();
+    tp.paint(canvas, endPoint);
   }
 
   double mapValueToFit(double x, double inMin, double inMax, double outMin, double outMax) {
