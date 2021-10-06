@@ -3,7 +3,7 @@ import 'package:bloc/bloc.dart';
 part 'playing_state.dart';
 
 class PlayingCubit extends Cubit<PlayingState> {
-  PlayingCubit() : super(PlayingState.playing);
+  PlayingCubit() : super(PlayingState.stop);
 
   void buttonPressed() {
     if (state == PlayingState.playing) {
@@ -11,5 +11,9 @@ class PlayingCubit extends Cubit<PlayingState> {
     } else {
       emit(PlayingState.playing);
     }
+  }
+
+  void reset() {
+    emit(PlayingState.stop);
   }
 }
