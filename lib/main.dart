@@ -43,8 +43,6 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       duration: const Duration(seconds: 8),
       upperBound: pi * 2,
     );
-
-    _animationController.repeat();
   }
 
   @override
