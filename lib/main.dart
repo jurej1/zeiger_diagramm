@@ -133,12 +133,13 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                     );
                   },
                 ),
+                const SizedBox(width: 10),
                 ElevatedButton(
                   onPressed: () {
                     _animationController.reset();
                     BlocProvider.of<PlayingCubit>(context).reset();
                   },
-                  child: Text('reset'),
+                  child: const Text('Reset'),
                 ),
               ],
             ),
