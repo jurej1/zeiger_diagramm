@@ -119,6 +119,11 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                               lineColor: Colors.orange,
                               name: 'U0',
                             ),
+                            ComplexPaintingObject(
+                              Complex.valueAngleDegree(66.0357, -45.898 + 180),
+                              lineColor: Colors.orange,
+                              name: '-U0',
+                            ),
                           ],
                         ),
                       );
